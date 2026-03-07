@@ -6,6 +6,7 @@ import "core:strconv"
 
 import q1 "./quest_1"
 import q2 "./quest_2"
+import q3 "./quest_3"
 
 main :: proc() {
 	defer free_all(context.temp_allocator)
@@ -28,6 +29,8 @@ main :: proc() {
 		q1.run(part, input_file)
 	case "2":
 		q2.run(part, input_file)
+	case "3":
+		q3.run(part, input_file)
 	case:
 		fmt.printf("Error: Quest '%s' not found.\n", quest_num)
 	}
